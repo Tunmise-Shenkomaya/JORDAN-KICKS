@@ -1,0 +1,581 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 80px;
+    min-height: 100vh;
+    line-height: 1.6;
+    background-image: linear-gradient(to bottom, #f5f5f5 0%, #ffffff 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADing STYLES H123 WITH BRAND COLORS, PARAGRAPH STYLING AND TEXT===== */
+h1 {
+  color: #e4002b;
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.2rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 400; /* Bebas Neue works best at regular weight */
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #e4002b, #000);
+}
+
+
+h2 {
+    color: #333;
+    margin: 1.5rem 0;
+    font-size: 2.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 2px solid #e4002b;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== MAIN COMPONENT CONTAINER STYLING===== */
+.content {
+    padding: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* ===== Product style, grid layout for product display,product card design with hover effect, product info formating ===== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.product-info {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #e4002b;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* ===== Buttons, styling with hover effects ===== */
+.btn {
+    display: inline-block;
+    background-color: #e4002b;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn:hover {
+    background-color: #c10024;
+    box-shadow: 0 2px 10px rgba(228, 0, 43, 0.3);
+}
+
+/* ===== About Page Styles, layout about sections, why choose us styling ===== */
+.about-section {
+    margin: 3rem 0;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.why-choose-us {
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+    
+
+}
+
+.why-choose-us-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
+ 
+}
+
+.why-choose-us-item {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 1rem;
+      
+   
+}
+
+/* ===== Contact Page Styles, form styling and layout, contact method cards ===== */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 150px;
+}
+
+.submit-btn {
+    background-color: #e4002b;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #c10024;
+}
+
+.contact-methods {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.contact-methods-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.contact-method {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem;
+}
+
+/* ===== Navigation, navbar positioning and sttyling, logo styling ===== */
+.navbar {
+    background-color: #111;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    min-height: 60px;
+}
+
+.logo {
+    color: hsl(355, 66%, 47%);
+    font-family: 'Orbitron', 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
+    display: inline-block;
+    padding: 0.5rem 0;
+    transform: skew(-5deg);
+}
+
+.nav-links {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    margin: 0 0.2rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: #e4002b;
+    color: #fff;
+}
+
+.nav-link.active{
+    background-color: #c10024;
+    color: #aaa;
+    border-radius: 5px;
+}
+
+
+/* Drop down styles, Category dropdown menu effect */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #e4002b;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* cart icon style */
+.cart-link {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 0.5rem;
+    font-size: 1rem;
+    position: relative;
+}
+
+.cart-icon {
+    font-size: 1.3rem;
+}
+
+.cart-count {
+    background-color: #e4002b;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+}
+
+/* ===== Footer, 3 column layout, social icon and copy riht section===== */
+footer {
+    background-color: #111;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: #e4002b;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #e4002b;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e4002b;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    color: #aaa;
+}
+
+/* ===== Responsive Design, tablet and mobile layouts, and content restucturing===== */
+@media (max-width: 992px) {
+    .content {
+        margin-top: calc(1rem + 1rem + 20px);
+    }
+    
+    .nav-links {
+        float: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    
+    .logo {
+        float: none;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .nav-link {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .dropdown-content {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+    }
+    
+    .dropdown:focus .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 0;
+        min-height: 80px;
+    }
+    
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        text-align: center;
+    }
+    
+    .nav-link {
+        margin: 0;
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .about-section {
+        flex-direction: column;
+    }
+    
+    .why-choose-us-container,
+    .contact-methods-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .content {
+        margin-top: 120px;
+        padding: 1rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .why-choose-us-item,
+    .contact-method {
+        min-width: 100%;
+    }
+}
+
