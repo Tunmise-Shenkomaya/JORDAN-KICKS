@@ -10,10 +10,7 @@ The site includes multiple pages with a clean UI/UX design.
 - Built with **HTML, CSS, and JavaScript**  
 
 ## ⚠️ Note
-The **e-commerce functionality (cart & checkout)** is not yet implemented — current focus is on **design and layout**.  
-
-## 📸 Preview
-*(Add screenshots here, e.g. homepage, product page)*  
+The **e-commerce functionality (cart & checkout)** is not yet implemented — current focus is on **design and layout**.   
 
 ## 🛠️ Technologies Used
 - HTML5  
